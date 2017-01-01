@@ -8,7 +8,12 @@
   <body>
     <div class="container">
       <h1>Your quote</h1>
-      <h2>$@Model.CalcQuote()</h2>
+      <h2>Length: @Model.GetLength()</h2>
+      <h2>Width: @Model.GetWidth()</h2>
+      <h2>Height: @Model.GetHeight()</h2>
+      <h2>Weight: @Model.GetWeight()</h2>
+      <h2>Total Volume: @Model.Volume()</h2>
+      <h2>Total Shipping Cost: $@Model.CostToShip()</h2>
     </div>
   </body>
 </html>
