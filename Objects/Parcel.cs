@@ -6,13 +6,15 @@ namespace Parcels.Objects
     private double _width;
     private double _height;
     private double _weight;
+    private double _distance;
 
-    public Parcel(double length, double width, double height, double weight)
+    public Parcel(double length, double width, double height, double weight, double distance)
     {
       _length = length;
       _width = width;
       _height = height;
       _weight = weight;
+      _distance = distance;
     }
 
     public double Volume()
@@ -20,9 +22,9 @@ namespace Parcels.Objects
       return _length * _width * _height;
     }
 
-    public double CostToShip(double distance = 1.0)
+    public double CostToShip()
     {
-      return (_length * _width * _height) * _weight * distance;
+      return (_length * _width * _height) * _weight * _distance;
     }
 
     public double GetLength()
@@ -63,6 +65,16 @@ namespace Parcels.Objects
     public void SetWeight(double newWeight)
     {
       _weight = newWeight;
+    }
+
+    public double GetDistance()
+    {
+      return _distance;
+    }
+
+    public void SetDistance(double newDistance)
+    {
+      _distance = newDistance;
     }
   }
 }

@@ -11,12 +11,12 @@ namespace Parcels
         return View["form.cshtml"];
       };
       Get["/quote"] = _ => {
-        int inputLength = Request.Query["length"];
-        int inputWidth = Request.Query["width"];
-        int inputHeight = Request.Query["height"];
-        int inputWeight = Request.Query["weight"];
-        int inputDistance = Request.Query["distance"];
-        Parcel myParcel = new Parcel(inputLength, inputWidth, inputHeight, inputWeight);
+        double inputLength = Request.Query["length"];
+        double inputWidth = Request.Query["width"];
+        double inputHeight = Request.Query["height"];
+        double inputWeight = Request.Query["weight"];
+        double inputDistance = Request.Query["distance"];
+        Parcel myParcel = new Parcel(inputLength, inputWidth, inputHeight, inputWeight, inputDistance);
         return View["quote.cshtml", myParcel];
       };
     }
